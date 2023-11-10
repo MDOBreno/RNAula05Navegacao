@@ -11,6 +11,10 @@
     "launch-ios": "npm run ios -- --simulator=\"iPhone SE (3rd generation)\""
   },
   "dependencies": {
+    "@react-navigation/bottom-tabs": "^6.5.11",
+    "@react-navigation/drawer": "^6.6.6",
+    "@react-navigation/native": "^6.1.9",
+    "@react-navigation/native-stack": "^6.9.17",
     "react": "16.13.1",
     "react-native": "0.63.5"
   },
