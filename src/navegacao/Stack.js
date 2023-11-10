@@ -1,19 +1,27 @@
 import React from 'react';
-// import { createStackNavigator } from 'react-navigation-stack';
 import {createStackNavigator} from '@react-navigation/stack';
 import TelaA from '../views/TelaA';
+import TelaB from '../views/TelaB';
+import TelaC from '../views/TelaC';
 
 const Stack = createStackNavigator();
-// const navigator = createStackNavigator({
-//     TelaA:TelaA,
-//     }, {
-//         initialRouteName: 'TelaA'
-//     }
-// );
-// export default createAppContainer(navigator);
 
 export default props => (
-    <Stack.Navigator initialRouteName='TelaA'>
-        <Stack.Screen name='TelaA' component={TelaA}/>
+    <Stack.Navigator 
+        initialRouteName='TelaA'
+        //Obs: A propriedade abaixo oculta o título
+        // screenOptions={{
+        //         headerShown: false
+        //     }
+        // }
+    >
+        <Stack.Screen name='TelaA' 
+            options={{
+                    title: 'Informacoes Iniciais'
+                }
+            }
+            component={TelaA}/>
+        <Stack.Screen name='TelaB' component={TelaB}/>
+        <Stack.Screen name='TelaC' component={TelaC}/>
     </Stack.Navigator>
 )
